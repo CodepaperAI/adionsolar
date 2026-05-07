@@ -1,65 +1,89 @@
-import Image from "next/image";
+import { AudiencePathCards } from "@/components/AudiencePathCards";
+import { CaseStudyFeature } from "@/components/CaseStudyFeature";
+import { CredibilityLine } from "@/components/CredibilityLine";
+import { CTAButton } from "@/components/CTAButton";
+import { FinalCTA } from "@/components/FinalCTA";
+import { HeroStage } from "@/components/HeroStage";
+import { ProcessSteps } from "@/components/ProcessSteps";
+import { Reveal } from "@/components/Reveal";
+import { SectionHeader } from "@/components/SectionHeader";
+import { caseStudies, heroImages } from "@/lib/site-data";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata = createMetadata({
+  title: "Georgia Solar Designed for Homes, Businesses, and Project Buyers",
+  description:
+    "Adion Solar routes homeowners, businesses, and product buyers into practical solar guidance from Madison, Georgia.",
+});
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <>
+      <HeroStage
+        eyebrow="Madison, Georgia solar"
+        title="Lower energy costs with solar designed for your home, business, or project."
+        copy="Adion helps Georgia homeowners, businesses, and project buyers understand solar options, estimate savings, and choose reliable panels, batteries, and inverters with local guidance."
+        image={heroImages.home}
+        primaryHref="/contact"
+        primaryLabel="Request Estimate"
+      />
+      <AudiencePathCards />
+      <CredibilityLine
+        items={[
+          "30-year output warranty",
+          "12-year product warranty",
+          "Local Madison, GA team",
+          "Financing guidance",
+          "PO support",
+        ]}
+      />
+      <section className="bg-[#fffdf8] px-6 py-24 md:px-10 md:py-32">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+          <Reveal>
+            <SectionHeader
+              eyebrow="Featured case"
+              title="A verified commercial project gives the numbers real weight."
+              copy="B.I. Production Works anchors the proof story with an 84.2 kW system, 73.4% solar offset, and $413,945 in projected 25-year savings."
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="mt-8">
+              <CTAButton href="/case-studies/bi-production-works" variant="dark">
+                Read The Case
+              </CTAButton>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <CaseStudyFeature caseStudy={caseStudies[0]} />
+          </Reveal>
         </div>
-      </main>
-    </div>
+      </section>
+      <ProcessSteps
+        title="How solar moves from first details to a clear next step."
+        copy="The path stays simple whether the request is a home estimate, business estimate, product question, or PO."
+        steps={[
+          {
+            title: "Share details",
+            copy: "Send the address, utility context, product need, or purchase-order request.",
+          },
+          {
+            title: "Receive estimate or quote",
+            copy: "Adion reviews the request type and responds with the right next step.",
+          },
+          {
+            title: "Review options",
+            copy: "Compare system fit, battery interest, product specs, warranty, and timing.",
+          },
+          {
+            title: "Move forward when ready",
+            copy: "Continue with the estimate, product guidance, PO support, or technical follow-up.",
+          },
+        ]}
+      />
+      <FinalCTA
+        title="Start with a simple solar savings estimate."
+        copy="Share the basics and Adion will route your request to the right home, business, product, PO, support, or general path."
+        href="/contact"
+        label="Request a Solar Savings Estimate"
+      />
+    </>
   );
 }
