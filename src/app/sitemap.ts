@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     ...caseStudies.map((item) => `/case-studies/${item.slug}`),
     ...serviceAreas.map((item) => `/service-areas/${item.slug}`),
+    ...serviceAreas.map((item) => `/home-solar/${item.slug}`),
+    ...serviceAreas.map((item) => `/commercial-solar/${item.slug}`),
   ];
 
   return routes.map((route) => ({
