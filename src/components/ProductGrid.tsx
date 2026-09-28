@@ -26,7 +26,7 @@ export function ProductGrid({
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.68, delay: index * 0.12, ease: [0.32, 0.72, 0, 1] }}
         >
-          <div className={`relative min-h-[320px] overflow-hidden rounded-[1.5rem] bg-[#241034] ${index % 2 === 1 ? "md:order-2" : ""}`}>
+          <div className={`relative min-h-[260px] overflow-hidden rounded-[1.5rem] bg-[#241034] sm:min-h-[320px] ${index % 2 === 1 ? "md:order-2" : ""}`}>
             <Image
               src={product.image.src}
               alt={product.image.alt}

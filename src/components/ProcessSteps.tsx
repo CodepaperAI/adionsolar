@@ -13,7 +13,7 @@ type ProcessStepsProps = {
 
 export function ProcessSteps({ eyebrow = "Process", title, copy, steps, dark = false }: ProcessStepsProps) {
   return (
-    <section className={`${dark ? "bg-[#241034] text-white" : "bg-[#fffdf8] text-[#241034]"} px-6 py-24 md:px-10 md:py-32`}>
+    <section className={`site-section ${dark ? "bg-[#241034] text-white" : "bg-[#fffdf8] text-[#241034]"} px-5 sm:px-6 md:px-10`}>
       <div className="mx-auto max-w-7xl">
         <Reveal>
           <div className="max-w-3xl">
@@ -24,11 +24,11 @@ export function ProcessSteps({ eyebrow = "Process", title, copy, steps, dark = f
             >
               {eyebrow}
             </p>
-            <h2 className="font-serif text-4xl font-semibold leading-[0.96] md:text-6xl">{title}</h2>
+            <h2 className="section-title font-serif font-semibold">{title}</h2>
             {copy && <p className={`mt-6 max-w-2xl text-lg leading-8 ${dark ? "text-white/68" : "text-[#665a69]"}`}>{copy}</p>}
           </div>
         </Reveal>
-        <div className="relative mt-12 grid gap-4 lg:grid-cols-4">
+        <div className={`relative mt-12 grid gap-4 ${steps.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
           <div className={`absolute left-0 right-0 top-10 hidden h-px lg:block ${dark ? "bg-white/14" : "bg-[#482366]/14"}`} />
           {steps.map((step, index) => (
             <Reveal key={step.title} delay={index * 0.06}>

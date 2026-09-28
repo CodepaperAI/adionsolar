@@ -16,14 +16,14 @@ export function SectionHeader({ eyebrow, title, copy, light = false }: SectionHe
         {eyebrow}
       </p>
       <h2
-        className={`font-serif text-4xl font-semibold leading-[0.96] md:text-6xl ${
+        className={`section-title font-serif font-semibold ${
           light ? "text-white" : "text-[#241034]"
         }`}
       >
         {title}
       </h2>
       {copy && (
-        <p className={`mt-6 max-w-2xl text-lg leading-8 ${light ? "text-white/68" : "text-[#665a69]"}`}>
+        <p className={`body-copy mt-5 max-w-2xl md:mt-6 ${light ? "text-white/72" : "text-[#665a69]"}`}>
           {copy}
         </p>
       )}

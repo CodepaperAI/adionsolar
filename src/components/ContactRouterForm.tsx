@@ -152,7 +152,7 @@ function ContactRouterFormInner() {
           <textarea
             name="message"
             rows={5}
-            className="resize-none rounded-[1.1rem] bg-[#482366]/7 px-4 py-3 text-[#241034] outline-none ring-1 ring-transparent transition focus:ring-[#f78c2d]"
+            className="resize-y rounded-[1.1rem] bg-[#482366]/7 px-4 py-3 text-base text-[#241034] outline-none ring-1 ring-transparent transition focus:ring-[#f78c2d]"
             placeholder={`Tell Adion about your ${activeOption.label.toLowerCase()} request.`}
           />
         </label>
@@ -213,7 +213,7 @@ function Field({
         type={type}
         required={required}
         defaultValue={defaultValue}
-        className="rounded-[1.1rem] bg-[#482366]/7 px-4 py-3 text-[#241034] outline-none ring-1 ring-transparent transition focus:ring-[#f78c2d]"
+        className="min-h-12 rounded-[1.1rem] bg-[#482366]/7 px-4 py-3 text-base text-[#241034] outline-none ring-1 ring-transparent transition focus:ring-[#f78c2d]"
       />
     </label>
   );

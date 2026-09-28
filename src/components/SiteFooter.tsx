@@ -10,8 +10,7 @@ export function SiteFooter() {
         <div>
           <BrandMark light />
           <p className="mt-6 max-w-md text-lg leading-8 text-white/64">
-            Madison, Georgia solar guidance for homes, commercial properties,
-            product buyers, and purchase-order support.
+            Field-tested solar. Designed for Georgia homes and businesses.
           </p>
           <div className="mt-8 grid gap-2 text-sm text-white/68">
             <a href={site.phoneHref}>{site.phone}</a>
@@ -27,8 +26,14 @@ export function SiteFooter() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/about" className="text-white/72 transition-colors hover:text-white">
-              About
+            <Link href="/resources" className="text-white/72 transition-colors hover:text-white">
+              Resources
+            </Link>
+            <Link href="/service-areas" className="text-white/72 transition-colors hover:text-white">
+              Service Areas
+            </Link>
+            <Link href="/contact" className="text-white/72 transition-colors hover:text-white">
+              Contact
             </Link>
           </div>
         </div>
@@ -49,7 +54,7 @@ export function SiteFooter() {
       </div>
       <div className="relative mx-auto mt-14 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-7 text-xs uppercase tracking-[0.2em] text-white/38 md:flex-row md:items-center md:justify-between">
         <span>Adion Solar. A B.I. Company.</span>
-        <span>Madison, Georgia solar guidance.</span>
+        <span>Field-tested solar for Georgia properties.</span>
       </div>
     </footer>
   );

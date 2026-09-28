@@ -4,7 +4,7 @@ import type { Stat } from "@/lib/types";
 
 export function ProofMetrics({ stats }: { stats: Stat[] }) {
   return (
-    <section className="relative overflow-hidden bg-[#241034] px-6 py-24 text-white md:px-10 md:py-32">
+    <section className="site-section relative overflow-hidden bg-[#241034] px-5 text-white sm:px-6 md:px-10">
       <div className="sunburst-motion absolute -left-20 bottom-0 size-72 rounded-full opacity-16 sunburst-gradient" />
       <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
@@ -23,7 +23,7 @@ export function ProofMetrics({ stats }: { stats: Stat[] }) {
                   index < stats.length - 1 ? "border-b sm:border-b-0 sm:border-r" : ""
                 } ${index % 2 === 0 ? "sm:pl-0" : ""}`}
               >
-                <p className="font-mono text-6xl font-medium tabular-nums text-[#fbad18]">{stat.value}</p>
+                <p className="font-mono text-4xl font-medium tabular-nums text-[#fbad18] sm:text-5xl xl:text-6xl">{stat.value}</p>
                 <p className="mt-4 text-sm font-black uppercase tracking-[0.2em] text-white">{stat.label}</p>
                 {stat.detail && <p className="mt-3 max-w-xs text-white/58">{stat.detail}</p>}
               </div>

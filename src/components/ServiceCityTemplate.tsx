@@ -31,7 +31,7 @@ export function ServiceCityTemplate({ service, area }: Props) {
         secondaryLabel={`More about ${area.name}`}
       />
 
-      <section className="px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section px-5 sm:px-6 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <SectionHeader
@@ -58,7 +58,7 @@ export function ServiceCityTemplate({ service, area }: Props) {
         </div>
       </section>
 
-      <section className="bg-[#fffdf8] px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section bg-[#fffdf8] px-5 sm:px-6 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionHeader
@@ -86,7 +86,7 @@ export function ServiceCityTemplate({ service, area }: Props) {
         </div>
       </section>
 
-      <section className="px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section px-5 sm:px-6 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionHeader
@@ -114,7 +114,7 @@ export function ServiceCityTemplate({ service, area }: Props) {
         </div>
       </section>
 
-      <section className="bg-[#fffdf8] px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section bg-[#fffdf8] px-5 sm:px-6 md:px-10">
         <div className="mx-auto max-w-7xl text-center">
           <Reveal>
             <SectionHeader

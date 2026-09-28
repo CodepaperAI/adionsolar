@@ -24,7 +24,7 @@ export default function CaseStudiesPage() {
         primaryHref="/case-studies/bi-production-works"
         primaryLabel="View Featured Case"
       />
-      <section className="px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section px-5 sm:px-6 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionHeader

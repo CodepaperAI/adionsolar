@@ -6,9 +6,9 @@ import { heroImages, site } from "@/lib/site-data";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Contact Adion Solar",
+  title: "Contact Adion Solar | Estimates, Commercial & Equipment",
   description:
-    "Route your Adion Solar request for home estimates, business solar, product guidance, purchase orders, support, or general questions.",
+    "Contact Adion Solar in Madison, Georgia for home solar estimates, commercial analysis, equipment, volume pricing, or product support.",
   path: "/contact",
 });
 
@@ -16,14 +16,14 @@ export default function ContactPage() {
   return (
     <>
       <HeroStage
-        eyebrow="Request routing"
-        title="What do you need help with?"
-        copy="Home, business, product, PO, support, and general requests each get a smaller form with the fields Adion actually needs."
+        eyebrow="Contact Adion"
+        title="Tell us what you’re working on."
+        copy="Considering solar for a home or business? Buying equipment? Need technical support? Contact us and we’ll route your request to the right next step."
         image={heroImages.contact}
         primaryHref="#request"
-        primaryLabel="Start Request"
+        primaryLabel="Contact Adion"
       />
-      <section id="request" className="scroll-mt-28 px-6 py-24 md:scroll-mt-32 md:px-10 md:py-32">
+      <section id="request" className="site-section scroll-mt-28 px-5 sm:px-6 md:scroll-mt-32 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr]">
           <Reveal>
             <SectionHeader

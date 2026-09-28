@@ -14,10 +14,9 @@ export const site = {
 export const navItems: NavItem[] = [
   { label: "Home Solar", href: "/home-solar" },
   { label: "Commercial", href: "/commercial-solar" },
-  { label: "Products", href: "/products" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "Resources", href: "/resources" },
-  { label: "Contact", href: "/contact" },
+  { label: "Equipment", href: "/products" },
+  { label: "Projects", href: "/projects" },
+  { label: "About", href: "/about" },
 ];
 
 export const heroImages = {
@@ -155,7 +154,7 @@ export const caseStudies: CaseStudy[] = [
     location: "Madison, Georgia",
     type: "Commercial",
     summary:
-      "A verified commercial system proving how Adion's B.I. heritage translates into measurable solar performance.",
+      "A permanent commercial solar project evaluated around facility energy use, available installation area, and long-term operating economics.",
     image: heroImages.caseStudies,
     stats: [
       { value: "84.2 kW", label: "System size" },
@@ -164,16 +163,16 @@ export const caseStudies: CaseStudy[] = [
     ],
     sections: [
       {
-        heading: "Situation",
-        body: "B.I. Production Works needed a practical system that could offset a meaningful share of facility energy usage without distracting from day-to-day operations.",
+        heading: "The situation",
+        body: "B.I. Production Works wanted to reduce the facility’s long-term purchased-energy burden while building a system around the realities of an active commercial property.",
       },
       {
-        heading: "Solution",
-        body: "Adion designed a commercial solar installation around the property load profile and available roof area, keeping project proof tied to verified numbers.",
+        heading: "The approach",
+        body: "The project was evaluated around facility load, available installation area, electrical and equipment requirements, and the operating context of the site.",
       },
       {
-        heading: "Result",
-        body: "The project anchors Adion's proof story: 84.2 kW of system capacity, 73.4% solar offset, and $413,945 in projected 25-year savings.",
+        heading: "The projected result",
+        body: "The current published project model shows a 73.4% solar offset and $413,945 in projected 25-year savings.",
       },
     ],
   },
@@ -245,72 +244,52 @@ export const caseStudies: CaseStudy[] = [
 
 export const homeFaqs: FAQ[] = [
   {
-    question: "How do I know if my roof is a fit?",
+    question: "How much could solar reduce my electric bill?",
     answer:
-      "Adion starts with address, roof exposure, utility usage, and shade review before recommending a system size or next step.",
+      "It depends on your usage, roof or site conditions, rate structure, system size, and other project factors. The estimate should be built from your utility data, not a generic savings percentage.",
   },
   {
     question: "Will panels change the appearance of my home?",
     answer:
-      "Panel placement is reviewed against roofline, visibility, and electrical constraints so the design fits the property rather than feeling bolted on.",
+      "They will be visible on many roofs. That is why layout matters. A deliberate design considers panel grouping, roofline, visibility, and electrical routing from the start.",
   },
   {
     question: "Can I add a battery?",
     answer:
-      "Yes. Battery interest is captured during the estimate so Adion can guide inverter, backup, and storage options early.",
+      "Yes. Discuss battery goals early because storage can affect inverter selection, critical loads, equipment placement, and the overall system design.",
   },
   {
-    question: "What if I have HOA questions?",
+    question: "What if I have an HOA?",
     answer:
-      "Share the community or HOA context during the request. Adion can discuss appearance, roof placement, and any documentation needed before you move forward.",
+      "Share the community or HOA requirements during the estimate so appearance, placement, and documentation can be considered during design.",
   },
   {
-    question: "How long does the estimate process take?",
+    question: "What warranties should I compare?",
     answer:
-      "The first step is a property and utility review. Timing depends on the roof, utility data, battery interest, and how quickly the needed details are available.",
-  },
-  {
-    question: "What warranties should I ask about?",
-    answer:
-      "Ask about panel output warranty, product warranty, inverter coverage, battery terms, workmanship, and what support looks like after installation.",
-  },
-  {
-    question: "Does Adion make exact savings promises?",
-    answer:
-      "No. Exact claims are shown only when substantiated by project data. Estimates are framed as guidance until Adion reviews the property.",
+      "Look beyond one headline number. Compare panel output coverage, product coverage, inverter and battery terms, workmanship, and what support looks like after installation.",
   },
 ];
 
 export const commercialFaqs: FAQ[] = [
   {
-    question: "What does Adion need for a business estimate?",
+    question: "What do you need to evaluate a project?",
     answer:
-      "Utility usage, property type, rough roof or land availability, timeline, and any operational constraints that affect installation planning.",
+      "Recent utility data, the property address, facility type, operating schedule, approximate roof or land availability, and any known battery or resilience requirements are a strong starting point.",
   },
   {
     question: "Will installation interrupt operations?",
     answer:
-      "Commercial planning should account for access, schedule, operations, and electrical coordination before installation begins.",
+      "The project plan should account for access, schedule, electrical coordination, and business operations before work begins.",
   },
   {
-    question: "Can Adion help with incentives?",
+    question: "Can batteries support a commercial property?",
     answer:
-      "Adion can review incentive considerations, but the site avoids tax or savings guarantees unless the client provides substantiation.",
+      "Yes, depending on the use case. Storage can be evaluated for backup, critical loads, resilience, and energy-management goals as part of the overall design.",
   },
   {
-    question: "How do we think about payback period?",
+    question: "How should we think about payback?",
     answer:
-      "Payback depends on usage, rate structure, system size, incentives, financing, and operating goals. Adion starts by reviewing your real utility context.",
-  },
-  {
-    question: "Can batteries support a business property?",
-    answer:
-      "Battery storage can be reviewed for backup, energy management, and resilience goals, but the right fit depends on critical loads and system design.",
-  },
-  {
-    question: "Who handles maintenance and monitoring questions?",
-    answer:
-      "Use the business estimate or support path to discuss monitoring expectations, equipment support, and any maintenance planning needed for the property.",
+      "Payback depends on usage, rate structure, system size, incentives, financing, and operating goals. The business case should be modeled from actual property and utility data rather than a generic return assumption.",
   },
 ];
 

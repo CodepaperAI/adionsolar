@@ -1,3 +1,4 @@
+import { CTAButton } from "@/components/CTAButton";
 import { FinalCTA } from "@/components/FinalCTA";
 import { HeroStage } from "@/components/HeroStage";
 import { ImagePanel } from "@/components/ImagePanel";
@@ -6,105 +7,13 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { heroImages, site } from "@/lib/site-data";
 import { createMetadata } from "@/lib/seo";
 
-export const metadata = createMetadata({
-  title: "About Adion Solar",
-  description:
-    "Adion Solar is a Madison, Georgia solar company and A B.I. Company, serving homeowners, businesses, and project buyers.",
-  path: "/about",
-});
+export const metadata = createMetadata({ title: "About Adion Solar | From Film Production Power to Georgia Solar", description: "Learn how Adion’s film-production power roots shaped its practical approach to permanent residential, commercial, and project solar.", path: "/about" });
 
-export default function AboutPage() {
-  return (
-    <>
-      <HeroStage
-        eyebrow="About Adion"
-        title="A local solar team helping Georgia homes and businesses make smarter energy decisions."
-        copy="Adion Solar is Madison-based and equipment-grounded, with roots in B.I. Production Works and a practical view of solar guidance."
-        image={heroImages.about}
-        primaryHref="/contact"
-        primaryLabel="Contact Adion"
-      />
-      <section className="px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-          <Reveal>
-            <SectionHeader
-              eyebrow="B.I. heritage"
-              title="Built from practical equipment experience, not abstract solar hype."
-              copy="Adion keeps the B.I. Company identity visible because practical equipment experience is part of the story."
-            />
-          </Reveal>
-          <Reveal delay={0.1}>
-            <ImagePanel image={heroImages.about} />
-          </Reveal>
-        </div>
-      </section>
-      <section className="px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
-          <Reveal>
-            <SectionHeader
-              eyebrow="Who we help"
-              title="Homes, businesses, and project buyers get distinct guidance."
-              copy="Solar decisions look different depending on the property, budget, equipment need, and purchase path."
-            />
-          </Reveal>
-          <div className="grid gap-4 md:grid-cols-3">
-            {[
-              ["Homeowners", "Savings estimates, roof fit, battery backup, appearance, and warranty questions."],
-              ["Businesses", "Utility costs, incentive considerations, operating needs, and measurable project proof."],
-              ["Product and project buyers", "Panels, inverters, batteries, datasheets, bulk pricing, and PO routing."],
-            ].map(([title, copy], index) => (
-              <Reveal key={title} delay={index * 0.05}>
-                <article className="h-full rounded-[1.6rem] bg-[#fbf6ec] p-7 ring-1 ring-[#482366]/8 transition-transform duration-700 bezier-smooth hover:-translate-y-1">
-                  <p className="font-mono text-sm font-medium tabular-nums text-[#f78c2d]">
-                    {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h2 className="mt-5 font-serif text-3xl font-semibold leading-none text-[#241034]">{title}</h2>
-                  <p className="mt-4 leading-7 text-[#665a69]">{copy}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="bg-[#fffdf8] px-6 py-24 md:px-10 md:py-32">
-        <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <SectionHeader
-              eyebrow="How we work"
-              title="Clear estimates, practical guidance, reliable equipment, local follow-through."
-            />
-          </Reveal>
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
-            {[
-              "Homeowners get a simple fit conversation before technical detail.",
-              "Businesses get utility and operational context before a proposal.",
-              "Product buyers get guidance, datasheets, compatibility, and PO routing.",
-              "Every public claim stays tied to verified information or careful language.",
-            ].map((item, index) => (
-              <Reveal key={item} delay={index * 0.05}>
-                <div className="h-full rounded-[1.6rem] bg-[#fbf6ec] p-7 ring-1 ring-[#482366]/8 transition-transform duration-700 bezier-smooth hover:-translate-y-1">
-                  {item}
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal delay={0.15}>
-            <div className="mt-12 rounded-[2rem] bg-[#241034] p-8 text-white md:p-10">
-              <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-[#fbad18]">Local contact</p>
-              <div className="mt-5 grid gap-3 text-lg text-white/76 md:grid-cols-3">
-                <a href={site.phoneHref}>{site.phone}</a>
-                <a href={`mailto:${site.email}`}>{site.email}</a>
-                <span>{site.address}</span>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-      <FinalCTA
-        title="Request a solar savings estimate or contact Adion Solar."
-        copy="Share the request type, property or product context, and the best way for Adion to follow up."
-        href="/contact"
-      />
-    </>
-  );
-}
+export default function AboutPage(){return <>
+  <HeroStage eyebrow="About Adion" title="We learned solar where power has to work." copy="Adion Solar is a Madison, Georgia solar and energy company with roots in film and television production — an environment that rewards dependable equipment, practical engineering, and systems built around demanding operating conditions." image={heroImages.about} primaryHref="/contact" primaryLabel="Contact Adion" />
+  <section className="site-section px-5 sm:px-6 md:px-10"><div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]"><Reveal><ImagePanel image={heroImages.commercial} tall label="North American field experience" /></Reveal><Reveal delay={.08}><SectionHeader eyebrow="Origin story" title="Our roots are mobile." copy="Before Adion was designing permanent systems for homes and businesses, solar-powered production trailers were operating across North America. More than 560 of those trailers are part of the operating experience behind Adion today. Film production was an unusually demanding classroom: loads change, equipment travels, schedules are unforgiving, and downtime matters." /><p className="body-copy mt-6 text-[#665a69]">That experience shaped a simple bias: understand what the system has to do, choose equipment that works together, and design around the way power will actually be used.</p></Reveal></div></section>
+  <section className="site-section bg-[#fffdf8] px-5 sm:px-6 md:px-10"><div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2"><Reveal><SectionHeader eyebrow="B.I. heritage" title="A B.I. Company" copy="Adion carries forward B.I.’s practical equipment and operating heritage. That matters because solar is not only a financial product; it is physical equipment that has to integrate with a property and continue working after the sale." /></Reveal><Reveal delay={.08}><SectionHeader eyebrow="Today" title="Today, the work is permanent too." copy="From its Madison base, Adion now works across residential, commercial, hospitality, manufacturing, and equipment applications. The setting changes. The expectation does not: the system has to make sense on paper and work in the field." /></Reveal></div></section>
+  <section className="site-section px-5 sm:px-6 md:px-10"><div className="mx-auto max-w-7xl"><Reveal><SectionHeader eyebrow="Operating principles" title="Practical decisions, documented proof, and local accountability." /></Reveal><div className="mt-12 grid divide-y divide-[#482366]/14 border-y border-[#482366]/14 md:grid-cols-2 md:divide-x md:divide-y-0 lg:grid-cols-4">{[["Practical over generic","The recommendation should fit the job, not a preset package."],["Equipment matters","Panels, batteries, inverters, compatibility, and support belong in the same conversation."],["Proof over hype","Use documented projects and substantiated numbers when they exist."],["Local accountability","A Madison-based team, permanent location, and people customers can reach after the proposal."]].map(([title,copy])=><article key={title} className="py-7 md:px-6"><h2 className="font-serif text-3xl font-semibold text-[#241034]">{title}</h2><p className="mt-4 leading-7 text-[#665a69]">{copy}</p></article>)}</div></div></section>
+  <section className="site-section bg-[#241034] px-5 text-white sm:px-6 md:px-10"><div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_auto] lg:items-end"><Reveal><SectionHeader light eyebrow="Local close" title="Based in Madison. Built to work beyond it." /><div className="mt-8 grid gap-2 text-lg text-white/72"><a href={site.phoneHref}>{site.phone}</a><a href={`mailto:${site.email}`}>{site.email}</a><span>{site.address}</span></div></Reveal><CTAButton href="/contact">Contact Adion</CTAButton></div></section>
+  <FinalCTA title="Tell us what you’re working on." copy="Start with the property, equipment, or support question and Adion will route the right next step." href="/contact" label="Contact Adion" />
+  </>}

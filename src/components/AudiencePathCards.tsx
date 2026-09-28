@@ -6,14 +6,14 @@ import { audiencePaths } from "@/lib/site-data";
 
 export function AudiencePathCards() {
   return (
-    <section className="px-6 py-24 md:px-10 md:py-32">
+    <section className="site-section px-5 sm:px-6 md:px-10">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.68fr_1.32fr]">
         <Reveal>
           <div className="sticky top-32">
             <p className="mb-5 inline-flex rounded-full bg-[#482366]/8 px-4 py-2 text-[0.68rem] font-black uppercase tracking-[0.24em] text-[#482366]">
               Choose the path
             </p>
-            <h2 className="font-serif text-4xl font-semibold leading-none text-[#241034] md:text-6xl">
+            <h2 className="section-title font-serif font-semibold text-[#241034]">
               Start with the path that matches your project.
             </h2>
             <p className="mt-6 max-w-md text-lg leading-8 text-[#665a69]">
@@ -29,7 +29,7 @@ export function AudiencePathCards() {
                 href={path.href}
                 className="group grid gap-6 py-8 md:grid-cols-[0.72fr_1fr_auto] md:items-center"
               >
-                <div className="relative min-h-[260px] overflow-hidden rounded-[1.4rem] bg-[#241034] md:min-h-[320px]">
+                <div className="relative min-h-[240px] overflow-hidden rounded-[1.4rem] bg-[#241034] sm:min-h-[280px] md:min-h-[320px]">
                   <Image
                     src={path.image.src}
                     alt={path.image.alt}

@@ -45,24 +45,24 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   return (
     <>
       <HeroStage
-        eyebrow={`${caseStudy.type} case study`}
+        eyebrow={caseStudy.slug === "bi-production-works" ? "Commercial Project • Madison, Georgia" : `${caseStudy.type} project`}
         title={caseStudy.title}
         copy={caseStudy.summary}
         image={caseStudy.image}
         primaryHref="/contact"
-        primaryLabel="Estimate My Property"
-        secondaryHref="/case-studies"
-        secondaryLabel="All Cases"
+        primaryLabel={caseStudy.slug === "bi-production-works" ? "Request Commercial Analysis" : "Get My Solar Estimate"}
+        secondaryHref="/projects"
+        secondaryLabel="All Projects"
         stats={caseStudy.stats}
       />
       <ProofMetrics stats={caseStudy.stats} />
-      <section className="px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section px-5 sm:px-6 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <Reveal>
             <SectionHeader
               eyebrow={caseStudy.location}
-              title="Situation, solution, and result in one clear project story."
-              copy="Each case keeps the focus on property context, system fit, measured results where available, and the next estimate step."
+              title={caseStudy.slug === "bi-production-works" ? "A project built around an active commercial property." : "Property context, system fit, and measured results."}
+              copy={caseStudy.slug === "bi-production-works" ? "The facility, available installation area, electrical requirements, and operating context shaped the recommendation." : "Each project keeps the focus on the property, the system, and the approved results."}
             />
           </Reveal>
           <div className="grid gap-4">
@@ -77,7 +77,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           </div>
         </div>
       </section>
-      <section className="bg-[#fffdf8] px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section bg-[#fffdf8] px-5 sm:px-6 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <Reveal>
             <ImagePanel image={caseStudy.image} tall label={`${caseStudy.type} proof`} />
@@ -102,21 +102,21 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
               <article className="rounded-[1.6rem] bg-[#fbf6ec] p-7 ring-1 ring-[#482366]/8">
                 <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-[#f78c2d]">Photos</p>
                 <h2 className="mt-5 font-serif text-3xl font-semibold leading-none text-[#241034]">
-                  Project photography can support the results once approved.
+                  {caseStudy.slug === "bi-production-works" ? "B.I. Production Works — Madison, Georgia" : `${caseStudy.title} project gallery`}
                 </h2>
                 <p className="mt-4 leading-8 text-[#665a69]">
-                  Published photos should show the actual property, equipment, or installation context whenever Adion has permission to use them.
+                  A full-width gallery will show the aerial, roof array, electrical equipment, inverter or battery equipment, exterior, and installation details.
                 </p>
               </article>
             </Reveal>
             <Reveal delay={0.15}>
               <article className="rounded-[1.6rem] bg-[#241034] p-7 text-white ring-1 ring-white/10">
-                <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-[#fbad18]">Client note</p>
+                <p className="text-[0.68rem] font-black uppercase tracking-[0.24em] text-[#fbad18]">Project proof</p>
                 <h2 className="mt-5 font-serif text-3xl font-semibold leading-none">
-                  Testimonials appear when the client has approved them.
+                  Published results stay tied to approved project data.
                 </h2>
                 <p className="mt-4 leading-8 text-white/66">
-                  Until then, the case stays grounded in project context, verified metrics, and practical next steps.
+                  The current published model shows a 73.4% solar offset and $413,945 in projected 25-year savings.
                 </p>
               </article>
             </Reveal>
@@ -124,10 +124,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         </div>
       </section>
       <FinalCTA
-        title="Estimate results for your property."
-        copy="Send the project context and Adion will route it to the right residential, commercial, or product path."
+        title={caseStudy.slug === "bi-production-works" ? "Put project-specific numbers around your facility." : "Have a property that could be next?"}
+        copy="Send the property and utility context so Adion can evaluate the right next step."
         href="/contact"
-        label="Estimate Results for My Property"
+        label={caseStudy.slug === "bi-production-works" ? "Request Commercial Analysis" : "Get My Solar Estimate"}
       />
     </>
   );

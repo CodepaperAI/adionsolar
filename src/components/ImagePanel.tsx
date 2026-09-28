@@ -13,7 +13,7 @@ export function ImagePanel({ image, priority = false, tall = false, label }: Ima
     <div className="group rounded-[2rem] bg-[#482366]/8 p-2 ring-1 ring-[#482366]/8 transition-transform duration-700 bezier-smooth hover:-translate-y-1">
       <div
         className={`relative overflow-hidden rounded-[1.55rem] bg-[#241034] shadow-[inset_0_1px_0_rgba(255,255,255,0.16)] ${
-          tall ? "min-h-[520px]" : "min-h-[360px]"
+          tall ? "min-h-[360px] sm:min-h-[440px] lg:min-h-[520px]" : "min-h-[300px] sm:min-h-[360px]"
         }`}
       >
         <Image

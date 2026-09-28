@@ -27,7 +27,7 @@ export default function ResourcesPage() {
         secondaryHref="/products"
         secondaryLabel="View Products"
       />
-      <section className="px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section px-5 sm:px-6 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <Reveal>
             <SectionHeader
@@ -78,7 +78,7 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#fffdf8] px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section bg-[#fffdf8] px-5 sm:px-6 md:px-10">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <SectionHeader
@@ -112,7 +112,7 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
-      <section className="px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section px-5 sm:px-6 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <Reveal>
             <SectionHeader

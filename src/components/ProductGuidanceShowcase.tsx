@@ -26,7 +26,7 @@ export function ProductGuidanceShowcase() {
     >
       <div className="absolute -right-40 top-24 size-[36rem] rounded-full opacity-[0.08] sunburst-gradient" />
       <div className="absolute -left-52 bottom-24 size-[30rem] rounded-full bg-[#911a4b]/18 blur-3xl" />
-      <div className="relative mx-auto grid max-w-[1500px] gap-12 px-6 py-24 md:px-10 md:py-28 xl:grid-cols-[0.72fr_1.28fr] xl:items-end xl:gap-16">
+      <div className="site-section relative mx-auto grid max-w-[1500px] gap-10 px-5 sm:px-6 md:px-10 xl:grid-cols-[0.72fr_1.28fr] xl:items-end xl:gap-16">
         <div className="max-w-[34rem] xl:pb-10">
           <SectionHeader
             light
@@ -43,7 +43,7 @@ export function ProductGuidanceShowcase() {
         </div>
 
         <motion.div
-          className="relative min-h-[520px] overflow-hidden rounded-[2rem] bg-[#160b20] ring-1 ring-white/12 shadow-[0_34px_90px_-58px_rgba(0,0,0,0.95)] md:min-h-[600px]"
+          className="relative min-h-[420px] overflow-hidden rounded-[1.5rem] bg-[#160b20] ring-1 ring-white/12 shadow-[0_34px_90px_-58px_rgba(0,0,0,0.95)] sm:min-h-[520px] sm:rounded-[2rem] md:min-h-[600px]"
           initial={reduceMotion ? false : { opacity: 0, y: 36 }}
           whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}

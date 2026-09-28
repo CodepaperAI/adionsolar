@@ -7,14 +7,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/home-solar",
     "/commercial-solar",
     "/products",
-    "/case-studies",
+    "/projects",
     "/resources",
+    "/service-areas",
     "/about",
     "/contact",
     ...caseStudies.map((item) => `/case-studies/${item.slug}`),
-    ...serviceAreas.map((item) => `/service-areas/${item.slug}`),
-    ...serviceAreas.map((item) => `/home-solar/${item.slug}`),
-    ...serviceAreas.map((item) => `/commercial-solar/${item.slug}`),
+    ...serviceAreas.filter((item) => item.slug === "madison-ga" || item.slug === "lake-oconee").map((item) => `/service-areas/${item.slug}`),
   ];
 
   return routes.map((route) => ({

@@ -24,7 +24,7 @@ export function CTAButton({
   external = false,
   onClick,
 }: CTAButtonProps) {
-  const classes = `group inline-flex items-center gap-3 rounded-full px-2 py-2 pl-6 text-sm font-bold uppercase tracking-[0.16em] transition-all duration-700 bezier-smooth hover:-translate-y-1 active:scale-[0.98] ${variantClasses[variant]}`;
+  const classes = `group inline-flex min-h-12 items-center justify-center gap-3 rounded-full px-2 py-2 pl-5 text-center text-[0.78rem] font-bold uppercase tracking-[0.14em] transition-all duration-700 bezier-smooth hover:-translate-y-1 active:scale-[0.98] sm:pl-6 sm:text-sm sm:tracking-[0.16em] ${variantClasses[variant]}`;
   const content = (
     <>
       <span>{children}</span>

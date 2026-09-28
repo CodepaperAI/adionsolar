@@ -8,9 +8,9 @@ import { heroImages, products } from "@/lib/site-data";
 import { createMetadata, JsonLd } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Solar Panels, Inverters, Batteries, and PO Support",
+  title: "Solar Panels, Inverters & Batteries",
   description:
-    "Adion Solar product guidance for panels, Sol-Ark inverters, batteries, datasheets, technical support, and purchase-order routing.",
+    "Shop solar panels, hybrid inverters, batteries, and project equipment with technical and volume-purchasing support.",
   path: "/products",
 });
 
@@ -19,17 +19,17 @@ export default function ProductsPage() {
     {
       title: "Solar Panels",
       copy: "High-output modules for residential, commercial, and project buyers who need dependable production.",
-      href: "#products",
+      href: "https://shop.adionsolar.com",
     },
     {
       title: "Inverters",
       copy: "Hybrid inverter options for battery-ready homes, business systems, generators, and monitoring needs.",
-      href: "#products",
+      href: "https://shop.adionsolar.com",
     },
     {
       title: "Batteries",
       copy: "Storage options for backup power, self-consumption, and resilience planning with compatible equipment.",
-      href: "#products",
+      href: "https://shop.adionsolar.com",
     },
   ];
 
@@ -56,22 +56,22 @@ export default function ProductsPage() {
     <>
       <JsonLd data={productSchema} />
       <HeroStage
-        eyebrow="Product guidance"
-        title="Solar panels, inverters, and batteries for homes, businesses, and project buyers."
-        copy="Compare core equipment, request product guidance, download support details, or route purchase-order needs without guessing what fits."
+        eyebrow="Solar Equipment"
+        title="Buy the equipment with a team that understands where it fits."
+        copy="Panels, hybrid inverters, batteries, and project purchasing support for homeowners, contractors, businesses, and volume buyers — with technical guidance when compatibility or application matters."
         image={heroImages.products}
-        primaryHref="#products"
-        primaryLabel="View Products"
-        secondaryHref="/contact?type=product"
-        secondaryLabel="Request Product Guidance"
+        primaryHref="https://shop.adionsolar.com"
+        primaryLabel="Shop Equipment"
+        secondaryHref="/contact?type=po"
+        secondaryLabel="Request Volume Pricing"
       />
-      <section className="px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section px-5 sm:px-6 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <Reveal>
             <SectionHeader
               eyebrow="Categories"
-              title="Start with the equipment family, then narrow the fit."
-              copy="Panels, inverters, and batteries each affect the system differently, so the product path keeps the choices separated."
+              title="Shop by equipment category."
+              copy="Start with panels, hybrid inverters, or battery storage, then ask Adion when compatibility or application matters."
             />
           </Reveal>
           <div className="grid gap-4 md:grid-cols-3">
@@ -85,7 +85,7 @@ export default function ProductsPage() {
                   <p className="mt-5 leading-7 text-[#665a69]">{category.copy}</p>
                   <div className="mt-auto pt-7">
                     <CTAButton href={category.href} variant="dark">
-                      View Products
+                      Shop {category.title}
                     </CTAButton>
                   </div>
                 </article>
@@ -94,19 +94,19 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#241034] px-6 py-24 text-white md:px-10 md:py-32">
+      <section className="site-section bg-[#241034] px-5 text-white sm:px-6 md:px-10">
         <div className="mx-auto grid max-w-7xl items-end gap-10 lg:grid-cols-[1fr_auto]">
           <Reveal>
             <SectionHeader
               light
               eyebrow="Guidance before buying"
-              title="Not sure what you need? Ask Adion before buying."
-              copy="Product, quantity, compatibility, warranty, datasheet, and bulk-pricing questions can route to a real support path before purchase."
+              title="Not sure what fits? Ask before you buy."
+              copy="Tell us the system, load, existing equipment, or project you are working with. We can help narrow compatibility, quantity, warranty questions, datasheets, and bulk-purchasing needs before the order is placed."
             />
           </Reveal>
           <Reveal delay={0.08}>
             <CTAButton href="/contact?type=product" variant="primary">
-              Request Product Guidance
+              Ask an Equipment Question
             </CTAButton>
           </Reveal>
         </div>
@@ -118,8 +118,8 @@ export default function ProductsPage() {
             <Reveal>
               <SectionHeader
                 eyebrow="Catalog"
-                title="Clean product cards with only the details buyers need first."
-                copy="Each item keeps essentials visible: name, image, short description, key specs, warranty, specs path, and a direct question route."
+                title="Featured equipment with the buying details up front."
+                copy="Each item shows the approved model, current price, verified specifications, warranty context, and a direct purchase or volume-pricing path."
               />
             </Reveal>
             <Reveal delay={0.1}>
@@ -145,7 +145,7 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
-      <section className="px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section px-5 sm:px-6 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1.25fr]">
           <Reveal>
             <SectionHeader
@@ -179,22 +179,22 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#fffdf8] px-6 py-24 md:px-10 md:py-32">
+      <section className="site-section bg-[#fffdf8] px-5 sm:px-6 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
           {[
             {
               eyebrow: "PO and bulk",
-              title: "Need bulk pricing or purchase-order support?",
-              copy: "Route quantity, company, product, and PO details to Adion so procurement can keep moving.",
+              title: "Buying for a project or in volume?",
+              copy: "Send the product, quantity, company, and timeline. We can help keep procurement moving without sending a project buyer through a residential sales form.",
               href: "/contact?type=po",
-              label: "Submit PO",
+              label: "Request Volume Pricing",
             },
             {
               eyebrow: "Technical support",
-              title: "Need help with an existing product?",
-              copy: "Send model, issue, serial details if relevant, and the support context needed for follow-up.",
+              title: "Already have the equipment?",
+              copy: "Send the model, issue, serial number if relevant, and enough system context for technical follow-up.",
               href: "/contact?type=support",
-              label: "Request Support",
+              label: "Get Product Support",
             },
           ].map((item, index) => (
             <Reveal key={item.title} delay={index * 0.06}>
@@ -213,10 +213,10 @@ export default function ProductsPage() {
         </div>
       </section>
       <FinalCTA
-        title="Need bulk pricing or purchase-order support?"
-        copy="Submit a PO, request pricing, or ask product questions before ordering equipment."
+        title="Buying for a project or in volume?"
+        copy="Send the product, quantity, company, and timeline so Adion can keep procurement moving."
         href="/contact?type=po"
-        label="Submit PO"
+        label="Request Volume Pricing"
       />
     </>
   );
