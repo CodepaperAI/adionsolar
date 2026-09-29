@@ -3,9 +3,10 @@ type SectionHeaderProps = {
   title: string;
   copy?: string;
   light?: boolean;
+  compact?: boolean;
 };
 
-export function SectionHeader({ eyebrow, title, copy, light = false }: SectionHeaderProps) {
+export function SectionHeader({ eyebrow, title, copy, light = false, compact = false }: SectionHeaderProps) {
   return (
     <div className="max-w-3xl">
       <p
@@ -16,7 +17,7 @@ export function SectionHeader({ eyebrow, title, copy, light = false }: SectionHe
         {eyebrow}
       </p>
       <h2
-        className={`section-title font-serif font-semibold ${
+        className={`${compact ? "text-[clamp(2.25rem,3.5vw,3.5rem)] leading-[1.02] text-balance" : "section-title"} font-serif font-semibold ${
           light ? "text-white" : "text-[#241034]"
         }`}
       >
