@@ -20,7 +20,8 @@ export function ImagePanel({ image, priority = false, tall = false, label }: Ima
           src={image.src}
           alt={image.alt}
           fill
-          priority={priority}
+          loading={priority ? "eager" : undefined}
+          fetchPriority={priority ? "high" : undefined}
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover transition-transform duration-700 bezier-smooth group-hover:scale-105"
         />
